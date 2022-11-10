@@ -14,6 +14,7 @@ import {
 } from 'chart.js'
 import { Line } from 'react-chartjs-2'
 import 'chartjs-adapter-date-fns';
+import {DeepPartial} from "chart.js/types/utils";
 
 ChartJS.register(
   CategoryScale,
@@ -33,7 +34,6 @@ interface PriceHistoryChartProps {
 const PriceHistoryChart: React.FC<PriceHistoryChartProps> = (props) => {
   const [renderState, setRenderState] = React.useState(Math.random());
   const provider = new Perfumehub
-  let graphData: any;
 
   useEffect(() => {
     provider.getPriceHistory(props.searchData)
@@ -44,9 +44,8 @@ const PriceHistoryChart: React.FC<PriceHistoryChartProps> = (props) => {
       })
   }, [])
 
-  const options = {
+  const options: DeepPartial<any> = {
     responsive: true,
-    type: 'line',
     plugins: {
       tooltip: {
         callbacks: {
@@ -74,12 +73,11 @@ const PriceHistoryChart: React.FC<PriceHistoryChartProps> = (props) => {
   const [data, setData] = useState({
     datasets: [{
       label: chrome.i18n.getMessage("price_history"),
-      data: graphData,
+      data: [],
       borderColor: '#63bbff',
       backgroundColor: '#63bbff',
     },]
   })
-
 
   return (
     <Line key={renderState} options={options} data={data} />

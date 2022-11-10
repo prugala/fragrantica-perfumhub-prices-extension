@@ -30,7 +30,7 @@ const PriceHistory: React.FC<PriceHistoryProps>= (props) => {
 
   return (
     <span>
-      <span onClick={openModal}><AiOutlineLineChart /></span>
+      <span onClick={openModal} style={{ cursor: "pointer" }}><AiOutlineLineChart /></span>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
