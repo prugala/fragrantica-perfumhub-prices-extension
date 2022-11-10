@@ -21,7 +21,7 @@ const Prices = () => {
           return (
               <div key={i}>
                 <p><strong>{chrome.i18n.getMessage(type.name.replace(' ', '_'))}</strong> <a target={"_blank"} href={provider.getHost() + type.url} rel="noreferrer">link</a></p>
-                <table>
+                <table className={'notes3'}>
                   <thead>
                   <tr>
                     <td style={{width: "50%"}}>{chrome.i18n.getMessage("size")}</td>
