@@ -2,13 +2,13 @@ import {Provider} from "./provider";
 import {Search} from "../model/search";
 import {Data} from "../model/data";
 import {Size} from "../model/size";
+import { PeriodRange } from "../enum/period-range";
 
 export class Perfumehub implements Provider {
     private name = 'perfumehub.pl'
     private currency = 'zł'
     private host = 'https://perfumehub.pl'
     private apiHost = 'https://extension.isedo.pl'
-    private period = '365'
 
     getData(name: string): Promise<Data> {
         const options = {
@@ -21,8 +21,7 @@ export class Perfumehub implements Provider {
             .then((search) => this.getPrices(search))
     }
 
-    getPrices(search: Search): Promise<Data>
-    {
+    getPrices(search: Search): Promise<Data> {
         const options = {
             method: "GET",
         };
@@ -32,7 +31,7 @@ export class Perfumehub implements Provider {
             .then((data) => data)
     }
 
-    getPriceHistory(params: Size): Promise<any> {
+    getPriceHistory(params: Size, range: PeriodRange): Promise<any> {
         const options = {
             method: "GET",
         };
@@ -45,7 +44,7 @@ export class Perfumehub implements Provider {
                 type: params.type,
                 tester: String(params.tester),
                 isSet: String(params.set),
-                period: this.period
+                period: range
             })
             , options)
             .then((response) => response.json())

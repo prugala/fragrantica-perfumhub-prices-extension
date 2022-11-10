@@ -36,7 +36,7 @@ const PriceHistory: React.FC<PriceHistoryProps>= (props) => {
         onRequestClose={closeModal}
         style={customStyles}
       >
-        <button style={{ float: "right" }} onClick={closeModal}><AiOutlineCloseCircle /></button>
+        <span style={{ float: "right" }} onClick={closeModal}><AiOutlineCloseCircle /></span>
         <div style={{ width: "auto" }}>
           <PriceHistoryChart searchData={props.searchData} />
         </div>

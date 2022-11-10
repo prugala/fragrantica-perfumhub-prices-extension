@@ -19,6 +19,7 @@ import moment from "moment/moment";
 import "moment/locale/pl";
 
 import "chartjs-adapter-moment";
+import { PeriodRange } from "../enum/period-range";
 
 moment.locale(chrome.i18n.getUILanguage())
 
@@ -40,9 +41,11 @@ interface PriceHistoryChartProps {
 const PriceHistoryChart: React.FC<PriceHistoryChartProps> = (props) => {
   const [renderState, setRenderState] = React.useState(Math.random());
   const provider = new Perfumehub
+  const period = PeriodRange.year
+
 
   useEffect(() => {
-    provider.getPriceHistory(props.searchData)
+    provider.getPriceHistory(props.searchData, period)
       .then((response) => {
         data.datasets[0].data = response;
         setData(data)
