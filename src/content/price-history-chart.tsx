@@ -15,6 +15,12 @@ import {
 import { Line } from 'react-chartjs-2'
 import 'chartjs-adapter-date-fns';
 import {DeepPartial} from "chart.js/types/utils";
+import moment from "moment/moment";
+import "moment/locale/pl";
+
+import "chartjs-adapter-moment";
+
+moment.locale(chrome.i18n.getUILanguage())
 
 ChartJS.register(
   CategoryScale,
