@@ -15,7 +15,7 @@ interface PriceHistoryProps {
   searchData: Size
 }
 
-Modal.setAppElement('#app');
+Modal.setAppElement('body');
 
 const PriceHistory: React.FC<PriceHistoryProps>= (props) => {
   const [modalIsOpen, setModalIsOpen] = React.useState(false);
