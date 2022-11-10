@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {Perfumehub} from "../provider/perfumehub";
 import {Data} from "../model/data";
+import PriceHistory from "./price-history";
 
 const Prices = () => {
   const [prices, setPrices] = useState(new Data())
@@ -20,7 +21,7 @@ const Prices = () => {
           return (
               <div key={i}>
                 <p><strong>{chrome.i18n.getMessage(type.name.replace(' ', '_'))}</strong> <a target={"_blank"} href={provider.getHost() + type.url} rel="noreferrer">link</a></p>
-                <table className={'notes3'}>
+                <table className={'notes3'} style={{width: '100%'}}>
                   <thead>
                   <tr>
                     <td style={{width: "50%"}}>{chrome.i18n.getMessage("size")}</td>
@@ -32,7 +33,7 @@ const Prices = () => {
                       return (
                           <tr key={j}>
                             <td>{size.size} ml {size.tester && <span>{chrome.i18n.getMessage("tester")}</span>} {size.set && <span>{chrome.i18n.getMessage("set")}</span>}</td>
-                            <td>{size.price} {provider.getCurrency()} {size.priceChange != 0 && <span style={{color: size.priceChange > 0 ? 'red' : 'green'}}>{size.priceChange.toFixed(2)}%</span>}</td>
+                            <td>{size.price} {provider.getCurrency()} {size.priceChange != 0 && <span style={{color: size.priceChange > 0 ? 'red' : 'green'}}>{size.priceChange.toFixed(2)}%</span>} <span style={{float: "right", marginLeft: "1rem"}}><PriceHistory searchData={size}/></span></td>
                           </tr>
                       )
                     })}

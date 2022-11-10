@@ -1,6 +1,8 @@
 import {Provider} from "./provider";
 import {Search} from "../model/search";
 import {Data} from "../model/data";
+import {Size} from "../model/size";
+import { PeriodRange } from "../enum/period-range";
 
 export class Perfumehub implements Provider {
     private name = 'perfumehub.pl'
@@ -19,8 +21,7 @@ export class Perfumehub implements Provider {
             .then((search) => this.getPrices(search))
     }
 
-    getPrices(search: Search): Promise<Data>
-    {
+    getPrices(search: Search): Promise<Data> {
         const options = {
             method: "GET",
         };
@@ -28,6 +29,25 @@ export class Perfumehub implements Provider {
             .then((response) => response.json())
             .then((data) => Object.assign(new Data(), data))
             .then((data) => data)
+    }
+
+    getPriceHistory(params: Size, range: PeriodRange): Promise<any> {
+        const options = {
+            method: "GET",
+        };
+        return fetch(this.apiHost + '/price-history/' + this.name + '?' +
+            new URLSearchParams({
+                size: String(params.size),
+                brand: params.brand,
+                line: params.line,
+                gender: params.gender,
+                type: params.type,
+                tester: String(params.tester),
+                isSet: String(params.set),
+                period: range
+            })
+            , options)
+            .then((response) => response.json())
     }
 
     getName(): string {
