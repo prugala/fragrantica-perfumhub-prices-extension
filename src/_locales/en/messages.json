@@ -1,9 +1,9 @@
 {
   "ext_name": {
-    "message": "Perfume prices on Fragrantica"
+    "message": "Perfume prices"
   },
   "ext_description": {
-    "message": "Display perfume prices on Fragrantica"
+    "message": "Display perfume prices on Fragrantica and Parfumo.net"
   },
   "source": {
     "message": "Source"
