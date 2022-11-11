@@ -21,6 +21,9 @@
     "build": "rollup -c",
     "release": "cross-env NODE_ENV=production rollup -c",
     "start": "rollup -c -w",
+    "build-firefox": "version=2 rollup -c",
+    "release-firefox": "cross-env NODE_ENV=production version=2 rollup -c",
+    "start-firefox": "version=2 rollup -c -w",
     "test": "jest"
   },
   "dependencies": {

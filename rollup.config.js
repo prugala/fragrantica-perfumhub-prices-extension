@@ -11,9 +11,10 @@ import replace from '@rollup/plugin-replace'
 import json from "@rollup/plugin-json";
 
 const isProduction = process.env.NODE_ENV === 'production'
+const version = process.env.version === '2' ? 'v2' : 'v3'
 
 export default {
-  input: 'src/manifest.json',
+  input: `src/manifest_${version}.json`,
   output: {
     dir: 'dist',
     format: 'esm',
