@@ -14,7 +14,7 @@ export class ProductData {
         if (page === PageType.FRAGRANTICA) {
             // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-ignore
-            return parseInt(window?.location?.pathname?.match(/(\d+)/)[0])
+            return parseInt(window?.location?.pathname?.match(/-(\d+).html/)[1])
         } else {
             // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-ignore
