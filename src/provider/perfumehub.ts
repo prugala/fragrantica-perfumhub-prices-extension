@@ -9,7 +9,7 @@ export class Perfumehub implements Provider {
     private name = 'perfumehub.pl'
     private currency = 'zł'
     private host = 'https://perfumehub.pl'
-    private apiHost = 'https://localhost'
+    private apiHost = 'https://extension.isedo.pl'
 
     getData(name: string, page: PageType, id: number): Promise<Data> {
         const options = {
