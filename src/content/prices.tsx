@@ -2,17 +2,29 @@ import React, {useEffect, useState} from "react";
 import {Perfumehub} from "../provider/perfumehub";
 import {Data} from "../model/data";
 import PriceHistory from "./price-history";
+import {ProductData} from "../helper/product-data";
+import {PageType} from "../enum/page-type";
 
 const Prices = () => {
   const [prices, setPrices] = useState(new Data())
   const h1 = document.getElementsByTagName('h1')
-  const name = h1[0]?.innerHTML.replace(/<.*>.*?/ig, '')
+  let name = h1[0]?.innerHTML.replace(/<.*>.*?/ig, '')
+  name = name.trim()
+
+  const page = ProductData.getPage(window.location.toString())
+  const id = ProductData.getId(page)
+
+  if (page === PageType.PARFUMO) {
+    const itemPropElement = document.querySelector('span[itemprop="name"]')
+
+    name += ' ' + itemPropElement?.textContent
+  }
 
   //TODO move providers to options and use builder
   const provider = new Perfumehub
 
   useEffect(() => {
-    provider.getData(name).then(data => setPrices(data))
+    provider.getData(name.trim(), page, id).then(data => setPrices(data))
   }, [])
 
   return (

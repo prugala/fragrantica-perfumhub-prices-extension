@@ -3,19 +3,24 @@ import {Search} from "../model/search";
 import {Data} from "../model/data";
 import {Size} from "../model/size";
 import { PeriodRange } from "../enum/period-range";
+import {PageType} from "../enum/page-type";
 
 export class Perfumehub implements Provider {
     private name = 'perfumehub.pl'
     private currency = 'zł'
     private host = 'https://perfumehub.pl'
-    private apiHost = 'https://extension.isedo.pl'
+    private apiHost = 'https://localhost'
 
-    getData(name: string): Promise<Data> {
+    getData(name: string, page: PageType, id: number): Promise<Data> {
         const options = {
             method: "GET",
         };
 
-        return fetch(this.apiHost + '/search/' + this.name + '/' + name, options)
+        return fetch(this.apiHost + '/search/' + this.name + '/' + name + '?' +
+            new URLSearchParams({
+                page: String(page.toString()),
+                id: String(id)
+            }), options)
             .then((response) => response.json())
             .then((data) => Object.assign(new Search(), data))
             .then((search) => this.getPrices(search))
