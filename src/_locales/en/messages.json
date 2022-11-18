@@ -5,6 +5,9 @@
   "ext_description": {
     "message": "Display perfume prices on Fragrantica and Parfumo.net"
   },
+  "send": {
+    "message": "Send"
+  },
   "source": {
     "message": "Source"
   },
@@ -46,5 +49,17 @@
   },
   "price_history": {
     "message": "Price history"
+  },
+  "report_missing_prices": {
+    "message": "Report missing prices"
+  },
+  "report_wrong_prices": {
+    "message": "Report wrong prices"
+  },
+  "report_prices_success": {
+    "message": "Your link has been saved. We will verify it. Thank you"
+  },
+  "report_prices_error": {
+    "message": "Something went wrong. Try again later."
   }
 }

@@ -6,7 +6,7 @@ import {Size} from "../model/size";
 
 const customStyles = {
   content: {
-    bottom: 'auto',
+    height: '90vh',
   },
   overlay: { zIndex: 1000 }
 };

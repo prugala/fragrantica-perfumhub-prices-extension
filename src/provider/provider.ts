@@ -5,4 +5,5 @@ export interface Provider {
     getName(): string
     getCurrency(): string
     getHost(): string
+    getApiHost(): string
 }

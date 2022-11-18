@@ -5,6 +5,9 @@
   "ext_description": {
     "message": "Wyświetlanie cen perfum na Fragrantica oraz Parfumo.net"
   },
+  "send": {
+    "message": "Wyślij"
+  },
   "source": {
     "message": "Źródło"
   },
@@ -46,5 +49,17 @@
   },
   "price_history": {
     "message": "Historia cen"
+  },
+  "report_missing_prices": {
+    "message": "Zgłoś brakujące ceny"
+  },
+  "report_wrong_prices": {
+    "message": "Zgłoś błędne ceny"
+  },
+  "report_prices_success": {
+    "message": "Twój link został zapisany, zweryfikujemy go. Dziękujemy."
+  },
+  "report_prices_error": {
+    "message": "Wystąpił błąd. Spróbuj ponownie później."
   }
 }

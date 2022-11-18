@@ -66,4 +66,8 @@ export class Perfumehub implements Provider {
     getHost(): string {
         return this.host
     }
+
+    getApiHost(): string {
+        return this.apiHost
+    }
 }

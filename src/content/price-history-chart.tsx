@@ -64,6 +64,7 @@ const PriceHistoryChart: React.FC<PriceHistoryChartProps> = (props) => {
         }
       }
     },
+    offset: true,
     parsing: {
       xAxisKey: 'date',
       yAxisKey: 'price'
