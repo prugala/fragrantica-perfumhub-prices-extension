@@ -1,19 +1,19 @@
 {
   "name": "perfume-prices-browser-extension",
-  "version": "0.5.0",
-  "private": true,
-  "description": "Add perfume prices on Fragrantica page",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Add perfume prices from Perfumehub on Fragrantica and Parfumo pages",
   "keywords": [
     "perfumehub",
     "fragrantica"
   ],
-  "homepage": "https://github.com/extend-chrome/ts-react-boilerplate#readme",
+  "homepage": "https://github.com/prugala/perfume-prices-browser-extension",
   "bugs": {
-    "url": "https://github.com/extend-chrome/ts-react-boilerplate/issues"
+    "url": "https://github.com/prugala/perfume-prices-browser-extension/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/extend-chrome/ts-react-boilerplate.git"
+    "url": "git+https://github.com/prugala/perfume-prices-browser-extension.git"
   },
   "license": "MIT",
   "author": "Piotr Rugala<piotr@isedo.pl>",

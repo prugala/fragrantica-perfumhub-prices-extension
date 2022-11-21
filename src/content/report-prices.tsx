@@ -89,8 +89,8 @@ const ReportPrices: React.FC<PriceHistoryProps> = (props) => {
           onRequestClose={closeModal}
           style={customStyles}
       >
-          <span style={{ float: "right" }} onClick={closeModal}><AiOutlineCloseCircle /></span>
-          <h3>{props.provider ? chrome.i18n.getMessage('report_wrong_prices') : chrome.i18n.getMessage('report_missing_prices')}</h3>
+          <span style={{ float: "right", cursor: "pointer" }} onClick={closeModal}><AiOutlineCloseCircle /></span>
+          <h3 style={{ color: "#212528" }}>{props.provider ? chrome.i18n.getMessage('report_wrong_prices') : chrome.i18n.getMessage('report_missing_prices')}</h3>
           <div>
               <span className="fld-input uk-form-controls">
                   <input type="url" name="newPricesUrl" placeholder={props.provider?.getHost() + '/...'} className={'uk-input'} onChange={validateUrl} onPaste={validateUrl} style={{border: !urlIsValid ? '1px solid #f50a0a' : '', marginBottom: '10px'}}></input>

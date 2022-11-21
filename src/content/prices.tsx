@@ -47,7 +47,7 @@ const Prices = () => {
                     return (
                         <tr key={j}>
                           <td>{size.size} ml {size.tester && <span>{chrome.i18n.getMessage("tester")}</span>} {size.set && <span>{chrome.i18n.getMessage("set")}</span>}</td>
-                          <td>{size.price} {provider.getCurrency()} {size.priceChange != 0 && <span style={{color: size.priceChange > 0 ? 'red' : 'green'}}>{size.priceChange.toFixed(2)}%</span>} <a href={size.prices[0].url} target={"_blank"} rel="noreferrer">link</a> <span style={{float: "right", marginLeft: "1rem"}}><PriceHistory searchData={size}/></span></td>
+                          <td>{size.price} {provider.getCurrency()} ({(size.price/size.size).toFixed(2) + ' '+ provider.getCurrency()}/ml) {size.priceChange != 0 && <span style={{color: size.priceChange > 0 ? 'red' : 'green'}}>{size.priceChange.toFixed(2)}%</span>} <a href={size.prices[0].url} target={"_blank"} rel="noreferrer">link</a> <span style={{float: "right", marginLeft: "1rem"}}><PriceHistory searchData={size}/></span></td>
                         </tr>
                     )
                   })}
