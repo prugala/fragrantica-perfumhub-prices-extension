@@ -1,9 +1,9 @@
 import React from 'react'
 import { render } from 'react-dom'
-import Prices from "./prices";
+import ProviderTabs from "./provider-tabs";
 const appElement = document.createElement('div')
 appElement.id = 'prices-box'
-render(<Prices/>, appElement)
+render(<ProviderTabs/>, appElement)
 
 const ratingElement = document.getElementById('rating')
 const optionsElement = document.getElementById('p_options_holder')

@@ -10,6 +10,7 @@ import zip from 'rollup-plugin-zip'
 import replace from '@rollup/plugin-replace'
 import json from "@rollup/plugin-json";
 import pkg from './package.json'
+import postcss from 'rollup-plugin-postcss'
 
 const isProduction = process.env.NODE_ENV === 'production'
 const version = process.env.version === '2' ? 'v2' : 'v3'
@@ -35,6 +36,9 @@ export default {
     typescript(),
     // Empties the output dir before a new build
     emptyDir(),
+    postcss({
+      plugins: []
+    }),
     // Outputs a zip file in ./releases
     isProduction && zip({ file: `../releases/${process.env.version === '2' ? 'firefox' : 'chrome'}-${pkg.name}-${pkg.version}.zip` }),
   ],

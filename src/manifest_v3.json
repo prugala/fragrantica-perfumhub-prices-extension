@@ -14,7 +14,6 @@
     }
   ],
   "action": {
-    "default_popup": "pages/popup/index.html",
     "default_icon": {
       "16": "images/icon.png",
       "32": "images/icon.png",
@@ -28,7 +27,7 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": ["_locales/*.json"],
+      "resources": ["_locales/*.json", "*.css"],
       "matches": ["https://www.fragrantica.pl/*", "https://www.fragrantica.com/*", "https://www.parfumo.net/*"]
     }
   ],

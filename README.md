@@ -1,5 +1,5 @@
 # Perfume prices browser extension
-Extension adds perfume prices from (https://perfumehub.pl) to:
+Extension adds perfume prices from (https://perfumehub.pl and https://perfumomaniak.pl) to:
 - https://fragrantica.pl
 - https://fragrantica.com
 - https://parfumo.net

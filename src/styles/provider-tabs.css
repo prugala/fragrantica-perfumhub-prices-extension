@@ -1,0 +1,11 @@
+.provider_tab_list {
+    margin: 0 0 5px 0;
+    padding: 0;
+    display: flex !important;
+}
+.provider_tab_list li:first-child {
+    margin-right: 5px;
+}
+.provider_tab_list .react-tabs__tab--selected {
+    text-decoration: underline;
+}

@@ -1,11 +1,13 @@
 {
   "name": "perfume-prices-browser-extension",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": false,
-  "description": "Add perfume prices from Perfumehub on Fragrantica and Parfumo pages",
+  "description": "Add perfume prices from Perfumehub and Perfumomaniak.pl on Fragrantica and Parfumo pages",
   "keywords": [
     "perfumehub",
-    "fragrantica"
+    "perfumomaniak",
+    "fragrantica",
+    "parfumo"
   ],
   "homepage": "https://github.com/prugala/perfume-prices-browser-extension",
   "bugs": {
@@ -30,8 +32,8 @@
     "@rollup/plugin-replace": "^3.0.0",
     "@types/chrome": "^0.0.127",
     "@types/firefox-webext-browser": "^82.0.0",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
     "@vespaiach/axios-fetch-adapter": "^0.3.1",
     "axios": "^1.1.3",
     "chart.js": "^3.9.1",
@@ -40,11 +42,13 @@
     "date-fns": "^2.29.3",
     "moment": "^2.29.4",
     "prettier": "^2.2.1",
-    "react": "^17.0.2",
+    "react": "^18.0",
     "react-chartjs-2": "^4.3.1",
-    "react-dom": "^17.0.2",
+    "react-dom": "^18.0",
     "react-icons": "^4.6.0",
     "react-modal": "^3.16.1",
+    "react-tabs": "^6.0.0",
+    "rollup-plugin-postcss": "^4.0.2",
     "webextension-polyfill": "^0.7.0"
   },
   "devDependencies": {
@@ -66,6 +70,7 @@
     "rollup-plugin-chrome-extension": "^3.6.1",
     "rollup-plugin-empty-dir": "^1.0.5",
     "rollup-plugin-zip": "^1.0.3",
+    "sass": "^1.56.1",
     "ts-jest": "^26.4.4",
     "tslib": "^2.0.3",
     "typescript": "^4.1.3"
