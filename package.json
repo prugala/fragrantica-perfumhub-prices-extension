@@ -1,6 +1,6 @@
 {
   "name": "perfume-prices-browser-extension",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "private": false,
   "description": "Add perfume prices from Perfumehub and Perfumomaniak.pl on Fragrantica and Parfumo pages",
   "keywords": [

@@ -9,7 +9,7 @@
       "matches": [
         "https://www.fragrantica.pl/perfumy/*",
         "https://www.fragrantica.com/perfume/*",
-        "https://www.parfumo.net/Perfumes/*"
+        "https://www.parfumo.com/Perfumes/*"
       ]
     }
   ],
@@ -28,7 +28,7 @@
   "web_accessible_resources": [
     {
       "resources": ["_locales/*.json", "*.css"],
-      "matches": ["https://www.fragrantica.pl/*", "https://www.fragrantica.com/*", "https://www.parfumo.net/*"]
+      "matches": ["https://www.fragrantica.pl/*", "https://www.fragrantica.com/*", "https://www.parfumo.com/*"]
     }
   ],
   "default_locale": "pl",

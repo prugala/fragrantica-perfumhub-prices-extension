@@ -2,7 +2,7 @@
 Extension adds perfume prices from (https://perfumehub.pl and https://perfumomaniak.pl) to:
 - https://fragrantica.pl
 - https://fragrantica.com
-- https://parfumo.net
+- https://parfumo.com
 
 If you want to have prices displayed on another page, create issue or pull request (changes in backend repository required).
 
